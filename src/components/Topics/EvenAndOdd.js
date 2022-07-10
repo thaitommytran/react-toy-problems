@@ -21,9 +21,9 @@ class EvenAndOdd extends Component {
 
     for (let number of arr) {
       if (number % 2 === 0) {
-        evens.push(parseInt(number));
+        evens.push(parseInt(number, 10));
       } else {
-        odds.push(parseInt(number));
+        odds.push(parseInt(number, 10));
       }
     }
 
@@ -41,7 +41,9 @@ class EvenAndOdd extends Component {
         <button
           className="confirmationButton"
           onClick={(event) => this.assignEvensAndOdds(this.state.userInput)}
-        ></button>
+        >
+          Split
+        </button>
         <span className="resultsBox">
           Evens: {JSON.stringify(this.state.evenArray)}
         </span>
